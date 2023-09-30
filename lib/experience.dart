@@ -20,13 +20,13 @@ class _ExperienceState extends State<Experience>
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 1),
       vsync: this,
     );
     animation = ColorTween(begin: kBlackColor, end: kScaffoldBackGroundColor)
         .animate(controller);
     iconColors =
-        ColorTween(begin: kBlackColor, end: kGreyColor).animate(controller);
+        ColorTween(begin: kBlackColor, end: kWhitesColor).animate(controller);
     purpleTexts =
         ColorTween(begin: kBlackColor, end: kMainColor).animate(controller);
     whiteTexts =

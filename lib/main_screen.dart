@@ -24,15 +24,15 @@ class _MainScreenState extends State<MainScreen>
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 1),
       vsync: this,
     );
-    animation = ColorTween(begin: kBlackColor, end: Color(0xFF181D3B))
+    animation = ColorTween(begin: kBlackColor, end: kScaffoldBackGroundColor)
         .animate(controller);
-    appBar = ColorTween(begin: kBlackColor, end: Color(0xFF0A0E21))
-        .animate(controller);
-    buttons = ColorTween(begin: kBlackColor, end: Color(0xFF0A0E21))
-        .animate(controller);
+    appBar =
+        ColorTween(begin: kBlackColor, end: kSecondPrimary).animate(controller);
+    buttons =
+        ColorTween(begin: kBlackColor, end: kSecondPrimary).animate(controller);
     textLogo =
         ColorTween(begin: kBlackColor, end: kMainColor).animate(controller);
     controller.forward();

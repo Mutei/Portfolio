@@ -19,17 +19,17 @@ class _SkillsState extends State<Skills> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 1),
       vsync: this,
     );
-    animation = ColorTween(begin: Colors.black, end: Color(0xFF181D3B))
+    animation = ColorTween(begin: kBlackColor, end: kScaffoldBackGroundColor)
         .animate(controller);
     iconColors =
-        ColorTween(begin: Colors.black, end: Colors.grey).animate(controller);
+        ColorTween(begin: kBlackColor, end: kWhitesColor).animate(controller);
     purpleTexts =
-        ColorTween(begin: Colors.black, end: kMainColor).animate(controller);
+        ColorTween(begin: kBlackColor, end: kMainColor).animate(controller);
     whiteTexts =
-        ColorTween(begin: Colors.black, end: kWhiteColor).animate(controller);
+        ColorTween(begin: kBlackColor, end: kWhiteColor).animate(controller);
 
     controller.forward();
     controller.addListener(() {
