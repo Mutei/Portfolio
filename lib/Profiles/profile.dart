@@ -21,7 +21,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 1),
       vsync: this,
     );
     animation = ColorTween(begin: kBlackColor, end: kScaffoldBackGroundColor)
