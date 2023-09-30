@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:portfolio/constant.dart';
 import 'main_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -34,7 +35,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       textStyle: TextStyle(
                         fontSize: 30.0,
                         fontWeight: FontWeight.bold,
-                        color: Colors.purple,
+                        color: kMainColor,
                       ),
                       speed: const Duration(milliseconds: 100),
                     ),

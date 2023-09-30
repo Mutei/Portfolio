@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constant.dart';
 
 class Experience extends StatefulWidget {
   const Experience({Key? key}) : super(key: key);
@@ -22,14 +23,14 @@ class _ExperienceState extends State<Experience>
       duration: Duration(seconds: 2),
       vsync: this,
     );
-    animation = ColorTween(begin: Colors.black, end: Color(0xFF181D3B))
+    animation = ColorTween(begin: kBlackColor, end: kScaffoldBackGroundColor)
         .animate(controller);
     iconColors =
-        ColorTween(begin: Colors.black, end: Colors.grey).animate(controller);
+        ColorTween(begin: kBlackColor, end: kGreyColor).animate(controller);
     purpleTexts =
-        ColorTween(begin: Colors.black, end: Colors.purple).animate(controller);
+        ColorTween(begin: kBlackColor, end: kMainColor).animate(controller);
     whiteTexts =
-        ColorTween(begin: Colors.black, end: Colors.white).animate(controller);
+        ColorTween(begin: kBlackColor, end: kWhiteColor).animate(controller);
 
     controller.forward();
     controller.addListener(() {
@@ -60,7 +61,7 @@ class _ExperienceState extends State<Experience>
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: Color(0xFF0A0E21),
+                    color: kSecondPrimary,
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),

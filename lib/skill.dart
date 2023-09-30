@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constant.dart';
 
 class Skills extends StatefulWidget {
   const Skills({Key? key}) : super(key: key);
@@ -26,9 +27,9 @@ class _SkillsState extends State<Skills> with SingleTickerProviderStateMixin {
     iconColors =
         ColorTween(begin: Colors.black, end: Colors.grey).animate(controller);
     purpleTexts =
-        ColorTween(begin: Colors.black, end: Colors.purple).animate(controller);
+        ColorTween(begin: Colors.black, end: kMainColor).animate(controller);
     whiteTexts =
-        ColorTween(begin: Colors.black, end: Colors.white).animate(controller);
+        ColorTween(begin: Colors.black, end: kWhiteColor).animate(controller);
 
     controller.forward();
     controller.addListener(() {

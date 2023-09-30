@@ -5,6 +5,7 @@ import 'package:portfolio/welcome_Screen.dart';
 import 'main_screen.dart';
 import 'Profiles/profile.dart';
 import 'skill.dart';
+import 'constant.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,10 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
-          primaryColor: const Color(0xFF0A0E21),
-          scaffoldBackgroundColor: const Color(0xFF181D3B),
-          colorScheme:
-              ColorScheme.fromSwatch().copyWith(secondary: Colors.purple),
+          primaryColor: kSecondPrimary,
+          scaffoldBackgroundColor: kScaffoldBackGroundColor,
+          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: kMainColor),
         ),
         initialRoute: WelcomeScreen.Id,
         routes: {

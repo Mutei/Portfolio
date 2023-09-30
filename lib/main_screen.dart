@@ -3,6 +3,7 @@ import 'package:portfolio/skill.dart';
 import 'Profiles/profile.dart';
 import 'Educations/education.dart';
 import 'experience.dart';
+import 'constant.dart';
 
 class MainScreen extends StatefulWidget {
   static String Id = 'mainScreen';
@@ -26,14 +27,14 @@ class _MainScreenState extends State<MainScreen>
       duration: Duration(seconds: 2),
       vsync: this,
     );
-    animation = ColorTween(begin: Colors.black, end: Color(0xFF181D3B))
+    animation = ColorTween(begin: kBlackColor, end: Color(0xFF181D3B))
         .animate(controller);
-    appBar = ColorTween(begin: Colors.black, end: Color(0xFF0A0E21))
+    appBar = ColorTween(begin: kBlackColor, end: Color(0xFF0A0E21))
         .animate(controller);
-    buttons = ColorTween(begin: Colors.black, end: Color(0xFF0A0E21))
+    buttons = ColorTween(begin: kBlackColor, end: Color(0xFF0A0E21))
         .animate(controller);
     textLogo =
-        ColorTween(begin: Colors.black, end: Colors.purple).animate(controller);
+        ColorTween(begin: kBlackColor, end: kMainColor).animate(controller);
     controller.forward();
     controller.addListener(() {
       setState(() {
@@ -59,7 +60,7 @@ class _MainScreenState extends State<MainScreen>
                     style: const TextStyle(
                       fontSize: 30.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.purple,
+                      color: kMainColor,
                     ),
                   ),
                 ),

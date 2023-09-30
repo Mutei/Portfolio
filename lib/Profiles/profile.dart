@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'email.dart';
 import 'phone.dart';
+import 'package:portfolio/constant.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -23,14 +24,14 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
       duration: Duration(seconds: 2),
       vsync: this,
     );
-    animation = ColorTween(begin: Colors.black, end: Color(0xFF181D3B))
+    animation = ColorTween(begin: kBlackColor, end: kScaffoldBackGroundColor)
         .animate(controller);
     iconColors =
-        ColorTween(begin: Colors.black, end: Colors.grey).animate(controller);
+        ColorTween(begin: kBlackColor, end: kGreyColor).animate(controller);
     purpleTexts =
-        ColorTween(begin: Colors.black, end: Colors.purple).animate(controller);
+        ColorTween(begin: kBlackColor, end: kMainColor).animate(controller);
     whiteTexts =
-        ColorTween(begin: Colors.black, end: Colors.white).animate(controller);
+        ColorTween(begin: kBlackColor, end: kWhiteColor).animate(controller);
 
     controller.forward();
     controller.addListener(() {
